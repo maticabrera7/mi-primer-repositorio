@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	/*overflow: auto;*/
+}
+	
+header{
+    height: 50px;
+    width: 100%;
+	background-size: cover;
+	font-style: italic;
+	display: inline;
+}
+
+a {
+	color: black;
+	font-weight: 600;
+	text-decoration: none;
+	/*font-size: 1.2rem;
+	line-height: 2rem;*/
+}
+
+ a:hover{
+	color: red;
+ }
+
+.navegacion {
+	
+	display: block;
+	position: relative;
+	bottom: 30px;
+	left: 600px;
+	position: sticky;
+	top: 0;
+	
+}
+
+.menu_header{
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+
+.menu_header li{
+	padding: 10px;
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+.description .presentacion {
+	width: 70%;
+	/*overflow: scroll;
+	border: 2px solid;*/
+	margin: 0 auto;
+	padding: 10px;
+	font-style: italic;
+	font-size: larger;
+}
+
+.busqueda{
+
+	text-align: center;
+	
+}
+
+.ubicacion{
+	background-size: cover;
+	background-image: url(../Imagenes/Cola\ ballena1.jpg);
+	padding: 50px;
+}
+
+.mapa .gps{
+	margin-left: 70%;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+.dato{
+	
+	background-color: aqua;
+	width: 600px;
+	height: 200px;
+	margin: 0 auto;
+	padding: 10px;
+	font-style: italic;
+	font-size: larger;
+	border-radius: 10px;
+}
+
+.casa1{
+	margin-left: 400px;
+	margin-bottom: 20px;
+}
+
+.casa2{
+	margin-left: 400px;
+	padding: 20px;
+}
+
+.texto {
+	width: 600px;
+	height: 150px;
+	/*overflow: scroll;
+	border: 2px solid;*/
+	margin: 0 auto;
+	padding: 10px;
+	font-style: italic;
+	font-size: larger;
+}
+
+.comentarios .coment {
+	padding: 30px;
+	width: 600px;
+	height: 150px;
+	/*overflow: scroll;*/
+	border: 2px solid;
+	margin: 0 auto;
+	padding: 10px;
+	font-style: italic;
+	font-size: larger;
+	border-radius: 10px;
+}
+
+.contacto{
+	text-align: center;
+	width: auto;
+	height: 600px;
+	background-image: url(../imagenes/Cola\ ballena.png);
+	background-size: cover;
+
+}
+
+h4{
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+footer{
+	text-align: center;
+}
+/*inicio GRID alojamiento*/
+.fotitos{
+	display: grid;
+	grid-template-columns: repeat(2, 200px);
+	grid-template-rows: 50px 300px 150px 300px;
+	row-gap: 10px;
+	column-gap: 10px;
+
+	grid-template-areas: 
+	"imagenes imagenes"
+	"descripcion descripcion"
+    "imagenes2 imagenes2"
+    "descripcion2 descripcion2";
+}
+
+
+.imagenes ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagenes2 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagenes{
+	grid-area: imagenes;
+}
+
+.imagenes2{
+	grid-area: imagenes2;
+}
+
+.descripcion{
+	grid-area: descripcion;
+}
+
+.descripcion2{
+	grid-area: descripcion2;
+}
+
+.descripcion {
+	
+	width: 600px;
+	height: 150px;
+	border: 2px solid;
+	margin: 0 auto;
+	padding: 10px;
+	font-style: italic;
+	font-size: larger;
+	
+}
+
+.descripcion2 {
+	
+	width: 600px;
+	height: 150px;
+	border: 2px solid;
+	margin: 0 auto;
+	padding: 10px;
+	font-style: italic;
+	font-size: larger;
+	
+}
+/*fin GRID alojamiento*/
+
+/*inicio GRID CABECERA*/
+.cabecera_principal{
+	background-color: beige;
+	display: grid;
+	grid-template-columns: repeat(4, 33,3%);
+	row-gap: 50px;
+	column-gap: 50px;
+	grid-template-areas: 	
+		"cabeza cabeza cabeza navega"	
+		;
+
+}
+.cabeza{
+	grid-area: cabeza;
+}
+
+.navega{
+	grid-area: navega;
+
+}
+
+/*fin GRID CABECERA*/
+
+/*inicio GRID busqueda*/
+.busqueda{
+	display: grid;
+	background-color: beige;
+	grid-template-columns: repeat(3, 33%);
+
+
+	grid-template-areas: 	
+		"prefe form1 form1"
+}
+
+.form1{
+	grid-area: form1;
+	
+}
+
+.prefe{
+	grid-area: prefe;
+}
+
+/*fin GRID busqueda*/
+
+/*inicio GRID ubicacion*/
+.ubicacion {
+
+	display: grid;
+	grid-template-columns: repeat(3, 33%);
+	grid-template-rows: repeat(2, 50%);
+	row-gap: 50px;
+	column-gap: 50px;
+	grid-template-areas: 
+		
+		"dato dato mapa mapa"
+		"dato dato mapa mapa"
+	
+		;
+}
+
+.dato{
+	grid-area: dato;
+}
+
+.mapa{
+	grid-area: mapa;
+}
+/*fin GRID ubicacion*/
+
+
+
+@media (max-width: 699px){
+
+	.dato{background-color: blue;}
+	
+	.ubicacion{
+		grid-template-rows: repeat(2, auto);
+		grid-template-areas: 
+			"dato dato"
+			"mapa mapa";}
+	
+			
+}
+@media (min-width: 700px){
+
+	.dato{background-color: beige;}
+	
+	.ubicacion{
+		grid-template-rows: repeat(2, 300px);
+		grid-template-areas: 
+			"dato mapa"
+			"dato mapa";}
+	
+			
+}
